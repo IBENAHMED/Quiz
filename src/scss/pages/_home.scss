@@ -1,0 +1,10 @@
+.home {
+    color: $white;
+    background-image: url("../../public/assets/image/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@import './home/header';
+@import './home/page_content';
+@import '../components/modal';

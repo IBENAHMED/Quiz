@@ -1,0 +1,34 @@
+{
+    "questions": [
+        {
+            "question": "What is the capital of France?",
+            "options": [
+                "London",
+                "Paris",
+                "Berlin",
+                "Rome"
+            ],
+            "correctAnswer": "Paris"
+        },
+        {
+            "question": "Who wrote 'To Kill a Mockingbird'?",
+            "options": [
+                "Harper Lee",
+                "Stephen King",
+                "J.K. Rowling",
+                "Charles Dickens"
+            ],
+            "correctAnswer": "Harper Lee"
+        },
+        {
+            "question": "What is the chemical symbol for water?",
+            "options": [
+                "H2O",
+                "CO2",
+                "NaCl",
+                "O2"
+            ],
+            "correctAnswer": "H2O"
+        }
+    ]
+}

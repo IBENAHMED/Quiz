@@ -1,0 +1,49 @@
+.modal {
+    display: none;
+    animation: opcit-out 0.5s forwards;
+
+    &.hidden {
+        animation: opcit-on 0.5s forwards;
+    }
+
+    @include centerCard(35.5rem, 22.5rem, $white);
+    @include paddingBorderBorderRadius(rem(20), rem(20), rem(5));
+    @include flex(space-between, left, 0, column);
+
+    &_title {
+        @include fontSW(rem(45), $font-weight-bold);
+        color: $primaryColor;
+    }
+
+    & ul {
+
+        @include paddingTopBottom(rem(20), rem(20));
+        line-height: 2;
+        color: $black;
+        font-weight: $font-weight-sm;
+        position: relative;
+
+        &::before {
+            @include before(100%, rem(1), 0%, 5%, $black);
+        }
+    }
+
+    &_button {
+        @include flex(space-between, center);
+
+        &-close {
+            @include mainButton(rem(10), rem(20), rem(5), $white, $primaryColor, $fontSizeRoot, $font-weight-medium, $white, $primaryColor, $primaryColor, $white);
+
+        }
+
+        &-continue {
+            @include mainButton(rem(10), rem(20), rem(5), $primaryColor, $white, $fontSizeRoot, $font-weight-medium, $white, $primaryColor, $primaryColorHover, $white);
+        }
+    }
+}
+
+@include extraSmall {
+    .modal {
+        @include centerCard(22rem, 30rem, $white);
+    }
+}
