@@ -1,0 +1,29 @@
+.home header {
+    @include paddingTopBottom(rem(15), rem(15));
+    @include flex(space-between, center);
+
+    & div span {
+        cursor: pointer;
+        @include fontSW(rem(30), $font-weight-medium);
+    }
+
+    & nav ul {
+        @include flex(center, center, rem(25));
+        @include fontSW($fontSizeRoot, $font-weight-sm);
+
+        & li {
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+@media(max-width:400px) {
+    .home header {
+        @include flex(center, center, rem(10));
+    }
+}

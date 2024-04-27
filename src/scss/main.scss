@@ -1,0 +1,20 @@
+/* function */
+@import 'partials/function';
+
+/* base */
+@import 'base/_rest.scss';
+@import 'base/_typography.scss';
+
+/* partials */
+@import 'partials/variables';
+@import 'partials/media-queries';
+@import 'partials/mixin';
+
+/* layout */
+@import 'layout/container';
+@import 'layout/global';
+
+/* pages */
+@import 'pages/home';
+@import 'pages/questonQuiz';
+@import 'pages/resultQuiz';

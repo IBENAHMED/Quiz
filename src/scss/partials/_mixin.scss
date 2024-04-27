@@ -1,0 +1,105 @@
+@mixin flex($justify, $align, $gap: 0, $row: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: wrap;
+    flex-direction: $row;
+}
+
+/* font-size and font-weight */
+@mixin fontSW($fs, $fw) {
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin mainButton($TopBottom, $LeftRight, $borderRadius, $backgroundColor, $color, $fs, $fw, $colorBorder, $shadowColor, $backgroundColorHover, $colorHover) {
+
+    padding: $TopBottom $LeftRight;
+    border-radius: $borderRadius;
+    background-color: $backgroundColor;
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    word-spacing: rem(1.5);
+    letter-spacing: rem(1.2);
+    border: rem(1) solid;
+    transition: 0.3s;
+    box-shadow: 0 rem(2) rem(4) $shadowColor;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $backgroundColorHover;
+        color: $colorHover;
+    }
+}
+
+@mixin mainButtonColor($backgroundColor, $color, $HoverbackgroundColor, $HoverColor) {
+    cursor: pointer;
+    background-color: $backgroundColor;
+    color: $color;
+
+    &:hover {
+        background-color: $HoverbackgroundColor;
+        color: $HoverColor;
+    }
+}
+
+@mixin centerCard($width, $height, $backgroundColor) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $backgroundColor;
+}
+
+@mixin paddingTopBottom($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin marginTopBottom($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin paddingBorderBorderRadius($TopBottom, $LeftRight, $borderRadius) {
+    padding: $TopBottom $LeftRight;
+    border-radius: $borderRadius;
+}
+
+@mixin before($width, $height, $left, $bottom, $color) {
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $height;
+    left: $left;
+    bottom: $bottom;
+    background-color: $color;
+}
+
+
+/* KeyFrames */
+@keyframes opcit-on {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes opcit-out {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

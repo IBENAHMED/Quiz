@@ -1,0 +1,41 @@
+.Dark {
+    color: $white;
+    background-color: $backgroundColor;
+
+    & .container .cards {
+        height: 100vh;
+        @include flex(center, center);
+
+        & .card {
+            border: rem(1) solid $primaryColor;
+            @include paddingBorderBorderRadius(rem(25), rem(25), rem(5));
+
+            & header {
+                position: relative;
+
+                & h1 {
+                    @include paddingTopBottom(rem(5), rem(5));
+                    text-align: center;
+                    background: linear-gradient(to top left, $primaryColor, $black);
+                    border-radius: rem(5);
+                    color: $semiTransparentWhite;
+                }
+            }
+
+            & footer {
+                position: relative;
+                padding-top: rem(20);
+
+                & .question {
+                    font-weight: $font-weight-sm;
+                    margin-top: rem(25);
+                    @include flex(center, center, rem(25));
+
+                    & a {
+                        @include mainButton(rem(5), rem(20), rem(5), $primaryColor, $white, $fontSizeRoot, $font-weight-medium, $white, $primaryColor, $black, $white);
+                    }
+                }
+            }
+        }
+    }
+}

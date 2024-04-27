@@ -1,0 +1,57 @@
+.questonQuiz {
+    & header {
+        & .site {
+            @include flex(space-between, center, rem(10));
+            @include marginTopBottom(rem(25), rem(25));
+            font-weight: $font-weight-sm;
+            color: $semiTransparentWhite;
+
+            & .score {
+                @include paddingBorderBorderRadius(rem(5), rem(10), rem(5));
+                color: $white;
+                background-color: $primaryColor;
+            }
+        }
+
+        &::before {
+            @include before(100%, rem(1), 0%, -15%, $primaryColor);
+        }
+    }
+
+    & section {
+        margin-top: rem(40);
+
+        p {
+            color: $semiTransparentWhite;
+        }
+
+        & h1 {
+            font-weight: $font-weight-medium;
+            margin-bottom: rem(15);
+        }
+
+        & li {
+            @include paddingTopBottom(rem(12), rem(12));
+            @include marginTopBottom(rem(12), rem(12));
+            padding-left: rem(15);
+            border-radius: rem(5);
+            border: rem(1) solid #eeeeee5f;
+            font-weight: 300;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $backgroundColorHover;
+            }
+        }
+    }
+
+    & footer {
+        p {
+            color: $semiTransparentWhite;
+        }
+
+        &::before {
+            @include before(100%, rem(1), 0%, 70%, $primaryColor);
+        }
+    }
+}
