@@ -1,0 +1,29 @@
+.resultQuiz {
+
+    & section {
+        @include flex(center, center, rem(15), column);
+        margin-top: rem(25);
+    }
+
+    .progress-circle {
+        @include flex(center, center);
+        width: rem(200);
+        height: rem(200);
+        border-radius: 50%;
+        position: relative;
+        color: $white;
+        background: conic-gradient($primaryColor 3.6deg, rgb(255, 255, 255, .1) 0deg);
+    }
+
+    .progress-circle::before {
+        @include before(rem(180), rem(180), 50%, calc(-50% + rem(20)), $white);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: $backgroundColor;
+    }
+
+    .progress-progress {
+        z-index: 3;
+        @include fontSW(rem(25), $font-weight-sm);
+    }
+}

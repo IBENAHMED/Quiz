@@ -1,0 +1,35 @@
+.home section {
+    height: calc(100vh - rem(67));
+    text-align: center;
+    @include flex(center, center);
+
+    div {
+        max-width: rem(500);
+        line-height: 2.5;
+
+        h1 {
+            @include fontSW(rem(60), $font-weight-bold);
+            height: rem(120);
+        }
+
+        @include extraSmall() {
+            h1 {
+                font-size: 35px
+            }
+        }
+
+        p {
+            @include fontSW(rem(14), $font-weight-sm);
+            line-height: $line-height-global;
+        }
+
+        .box_button {
+            @include paddingTopBottom(rem(15), rem(15));
+            margin-top: rem(20);
+
+            & .start_quiz {
+                @include mainButton(rem(15), rem(40), rem(5), $primaryColor, $white, $fontSizeRoot, $font-weight-medium, $white, $primaryColor, $black, $white);
+            }
+        }
+    }
+}
